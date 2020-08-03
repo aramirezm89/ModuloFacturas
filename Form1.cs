@@ -30,7 +30,7 @@ namespace ModuloFacturas
             ClsFactura factura = new ClsFactura(int.Parse(txtFactura.Text), txtProveedor.Text, txtDetalle.Text, int.Parse(txtTotales.Text));
             Listafactura.Add(factura);
             MessageBox.Show("Factura ingresada correctamente.\nNumero: " + txtFactura.Text + "\nProveedor: " + txtProveedor.Text +
-                            "\nDetalle: " + txtDetalle.Text + "\nTotal: $" + txtTotales.Text);
+                            "\nDetalle: " + txtDetalle.Text + "\nTotal: $" + txtTotales.Text,"Modulo Facturas",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         public void btnIngresar_Click(object sender, EventArgs e)
