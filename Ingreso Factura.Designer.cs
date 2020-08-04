@@ -1,6 +1,6 @@
 ﻿namespace ModuloFacturas
 {
-    partial class Form1
+    partial class IngresoFactura
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -228,7 +228,7 @@
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // Form1
+            // IngresoFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,8 +236,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "IngresoFactura";
+            this.Text = "Ingreso Factura";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

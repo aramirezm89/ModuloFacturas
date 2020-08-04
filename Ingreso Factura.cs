@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace ModuloFacturas
 {
-    public partial class Form1 : Form
+    public partial class IngresoFactura : Form
     {
         
        
         List<ClsFactura> Listafactura = new List<ClsFactura>();
-        public Form1()
+        public IngresoFactura()
         {
             InitializeComponent();
             
