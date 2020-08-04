@@ -29,6 +29,18 @@ namespace ModuloFacturas
         {
             ClsFactura factura = new ClsFactura(int.Parse(txtFactura.Text), txtProveedor.Text, txtDetalle.Text, int.Parse(txtTotales.Text));
             Listafactura.Add(factura);
+            DataTable tabla = new DataTable();
+            tabla.Columns.Add("Numero");
+            tabla.Columns.Add("Proveedor");
+            tabla.Columns.Add("Detalle");
+            tabla.Columns.Add("Total");
+            for (int i = 0; i < Listafactura.Count(); i++)
+            {
+                tabla.Rows.Add(Listafactura[i].Numero, Listafactura[i].Proveedor, Listafactura[i].Detalle, Listafactura[i].Totales);
+                dataGridView1.DataSource = tabla;
+            }
+
+            
             MessageBox.Show("Factura ingresada correctamente.\nNumero: " + txtFactura.Text + "\nProveedor: " + txtProveedor.Text +
                             "\nDetalle: " + txtDetalle.Text + "\nTotal: $" + txtTotales.Text,"Modulo Facturas",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
@@ -85,6 +97,14 @@ namespace ModuloFacturas
                 }
             }
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtFactura.Clear();
+            txtDetalle.Clear();
+            txtProveedor.Clear();
+            txtTotales.Clear();
         }
     }
    
