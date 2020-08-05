@@ -43,6 +43,10 @@ namespace ModuloFacturas
             
             MessageBox.Show("Factura ingresada correctamente.\nNumero: " + txtFactura.Text + "\nProveedor: " + txtProveedor.Text +
                             "\nDetalle: " + txtDetalle.Text + "\nTotal: $" + txtTotales.Text,"Modulo Facturas",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            txtFactura.Clear();
+            txtProveedor.Clear();
+            txtDetalle.Clear();
+            txtTotales.Clear();
         }
 
         public void btnIngresar_Click(object sender, EventArgs e)
