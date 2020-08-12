@@ -54,11 +54,11 @@ namespace ModuloFacturas
             int totalProducto5 = cantidad[4] * precio[4];
 
             double totalProducto = totalProducto1 + totalProducto2 + totalProducto3 + totalProducto4 + totalProducto5;
-            double iva = totalProducto * 0.19;
+            double iva = totalProducto / 1.19;
             double montoNeto = totalProducto - iva;
-            txtMontoN.Text = montoNeto.ToString(); 
+            txtMontoN.Text = Math.Round(montoNeto,2).ToString(); 
             txtMontoT.Text = totalProducto.ToString();
-            txtIva.Text = iva.ToString();
+            txtIva.Text = Math.Round(iva,2).ToString();
             
             ClsFactura factura = new ClsFactura(int.Parse(txtFactura.Text), txtProveedor.Text, txtRazonSocial.Text, txtGiro.Text, txtDireccion.Text,
                                                  codigo, descripcion, cantidad, precio, dateEmision.Text, dateEmision.Text, double.Parse(txtMontoN.Text),
